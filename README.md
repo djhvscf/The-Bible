@@ -1,2 +1,2 @@
 # The-Bible
-You can search, read the bible in many languages
+Random verses from the Holy Bible
