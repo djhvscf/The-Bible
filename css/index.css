@@ -1,8 +1,9 @@
-#book-name {
+#bookname {
     font-size: 21px;    
+    font-weight: bold !important;
 }
 
-.scripture {
+#verse {
     color: #ffffff !important;
     font-size: 20px !important;
     font-weight: bold !important;
