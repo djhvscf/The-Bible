@@ -1,9 +1,12 @@
 $(function() {
     $.ajax({
-    url:'http://getbible.net/json',
-    dataType: 'jsonp',
-    data: 'passage=2Jn1:1',
-    jsonp: 'getbible',
+    url:'https://labs.bible.org/api/',
+    dataType: 'json',
+    headers: { 
+        'Access-Control-Allow-Origin' : '*'
+    },
+    contentType: "application/json; charset=utf-8",
+    data: 'passage=random',
     success:function(json) {
         // set text direction
         if (json.direction == 'RTL') {
