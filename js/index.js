@@ -18,6 +18,7 @@ var sprintf = function (str) {
 var getScriptures = function (random) {
     $("#bookname").html("");
     $("#verse").html("Loading verse...");
+    $("#copy-verse").html("Copy to clipboard");
     
     $.ajax({
         url:"http://labs.bible.org/api/",
@@ -54,5 +55,11 @@ $(function() {
 
     $("#random-verse").click(function () {
         getScriptures(true);
+    });
+
+    var clipboard = new Clipboard("#copy-verse");
+    clipboard.on('success', function(e) {
+        e.clearSelection();
+        $(e.trigger).text("Copied!");
     });
 });
